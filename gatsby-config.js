@@ -1,53 +1,61 @@
 require(`dotenv`).config({
-  path: `.env`,
-})
+  path: `.env`
+});
 
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    siteTitle: `BOUND Plyobox`,
+    siteTitleAlt: `BOUND Plyobox - Strong Plyo Boxes built in the USA`,
+    siteHeadline: `Strong Plyo Boxes built in the USA`,
+    siteUrl: `https://www.boundplyobox.com/`,
+    author: `Bound Plyobox`,
+    siteDescription: `Highly-Rated, Strong Plyo Boxes built in Tulsa, Oklahoma`
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
-      // See the theme's README for all available options
       options: {
         navigation: [
           {
-            title: `Blog`,
-            slug: `/blog`,
+            title: `PRODUCTS`,
+            slug: `/products`
           },
           {
-            title: `About`,
-            slug: `/about`,
+            title: `ASSEMBLY`,
+            slug: `/assembly`
           },
+          {
+            title: `ABOUT`,
+            slug: `/about`
+          }
         ],
         externalLinks: [
           {
             name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            url: `https://twitter.com/boundplyobox`
           },
           {
             name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
-          },
-        ],
-      },
+            url: `https://instagram.com/boundplyobox`
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
-      },
+        trackingId: process.env.GOOGLE_ANALYTICS_ID
+      }
     },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Bound Plyobox - Strong Plyometric Boxes`,
+        short_name: `Bound Plyobox`,
+        description: `Highly-Rated Plyo Box built in Tulsa, Oklahoma`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,
@@ -56,15 +64,15 @@ module.exports = {
           {
             src: `/android-chrome-192x192.png`,
             sizes: `192x192`,
-            type: `image/png`,
+            type: `image/png`
           },
           {
             src: `/android-chrome-512x512.png`,
             sizes: `512x512`,
-            type: `image/png`,
-          },
-        ],
-      },
+            type: `image/png`
+          }
+        ]
+      }
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
@@ -73,8 +81,8 @@ module.exports = {
       options: {
         analyzerMode: `static`,
         reportFilename: `_bundle.html`,
-        openAnalyzer: false,
-      },
-    },
-  ].filter(Boolean),
-}
+        openAnalyzer: false
+      }
+    }
+  ].filter(Boolean)
+};

@@ -6,11 +6,11 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 
 module.exports = {
   siteMetadata: {
-    siteTitle: `BOUND Plyobox`,
-    siteTitleAlt: `BOUND Plyobox - Strong Plyo Boxes built in the USA`,
+    siteTitle: `Bound Plyo Box`,
+    siteTitleAlt: `Bound Plyo Box - Strong Plyo Boxes built in the USA`,
     siteHeadline: `Strong Plyo Boxes built in the USA`,
     siteUrl: `https://www.boundplyobox.com/`,
-    author: `Bound Plyobox`,
+    author: `Bound Plyo Box`,
     siteDescription: `Highly-Rated, Strong Plyo Boxes built in Tulsa, Oklahoma`
   },
   plugins: [
@@ -53,8 +53,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Bound Plyobox - Strong Plyometric Boxes`,
-        short_name: `Bound Plyobox`,
+        name: `Bound Plyo Box - Strong Plyometric Boxes`,
+        short_name: `Bound Plyo Box`,
         description: `Highly-Rated Plyo Box built in Tulsa, Oklahoma`,
         start_url: `/`,
         background_color: `#fff`,

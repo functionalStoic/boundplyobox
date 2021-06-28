@@ -1,8 +1,4 @@
-require(`dotenv`).config({
-  path: `.env`
-});
-
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
+require(`dotenv`).config({ path: `.env` });
 
 module.exports = {
   siteMetadata: {
@@ -76,7 +72,7 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
-    shouldAnalyseBundle && {
+    process.env.ANALYSE_BUNDLE && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {
         analyzerMode: `static`,
